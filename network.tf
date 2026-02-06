@@ -4,7 +4,7 @@ resource "aws_vpc" "myvpc" {
    enable_dns_hostnames = true
    tags = {
      terraform = "true"
-     Name = "vpc01"
+     Name = "vpc-01"
    }
  }
 
@@ -15,7 +15,7 @@ resource "aws_subnet" "public" {
   availability_zone       = "us-east-1a"
 
   tags = {
-    Name = "public-subnet"
+    Name = "public-subnet-01"
   }
 }
 
@@ -26,7 +26,7 @@ resource "aws_subnet" "private" {
   availability_zone       = "us-east-1b"
 
   tags = {
-    Name = "private-subnet"
+    Name = "private-subnet-01"
   }
 }
 
