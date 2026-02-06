@@ -4,12 +4,11 @@ resource "aws_vpc" "myvpc" {
    enable_dns_hostnames = true
    tags = {
      terraform = "true"
-     Name = "vpc001"
+     Name = "vpc01"
    }
  }
 
 # Public Subnet
-# -------------------------
 resource "aws_subnet" "public" {
   vpc_id                  = aws_vpc.myvpc.id
   cidr_block              = "10.101.1.0/24"
@@ -20,9 +19,7 @@ resource "aws_subnet" "public" {
   }
 }
 
-# -------------------------
 # Private Subnet
-# -------------------------
 resource "aws_subnet" "private" {
   vpc_id                  = aws_vpc.myvpc.id
   cidr_block              = "10.101.2.0/24"
